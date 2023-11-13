@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import Cover from "../../Shared/Cover/Cover";
 import Menuitem from "../../Shared/MenuItem/Menuitem";
 
@@ -11,6 +12,13 @@ const MenuCategory = ({items,title,img}) => {
             <div className="grid md:grid-cols-2 gap-10 mt-16">{
                     items.map(item=><Menuitem key={item.id} item={item}></Menuitem>)
                     }</div>
+
+                    <Link to={`/order/${title}`}>
+                 <button className="btn btn-outline border-0 border-b-4 mt-4 ">Order Now</button>
+
+
+                    </Link>
+
 
         </div>
     );
